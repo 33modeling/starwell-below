@@ -1,0 +1,320 @@
+{
+  "schema": "rea-analysis/v1",
+  "id": "javascript-metroidvania-starwell-below",
+  "title": "JavaScript-Metroidvania·gib → 별우물 아래",
+  "analyzed_at": "2026-11-26",
+  "app": {
+    "slug": "starwell-below",
+    "name": "별우물 아래 (Starwell Below)",
+    "repo": "33modeling/starwell-below",
+    "url": "https://github.com/33modeling/starwell-below"
+  },
+  "target": {
+    "name": "JSLegendDev/JavaScript-Metroidvania",
+    "source_url": "https://github.com/JSLegendDev/JavaScript-Metroidvania",
+    "commit": "5a2ef84de0978e790b0edf035cf5a5a1901fa44c",
+    "license": "MIT (Copyright (c) 2024 JSLegend) — 읽기만, 코드 옮기지 않음",
+    "scope": "src/ 의 JS 13개와 index.html·README·LICENSE 만 얕게 받음. 그림·소리·Tiled 지도·kaboom 라이브러리는 받지 않음. 비교 대상 attilahorvath/gib(2ecea116da3e, MIT) src/ 39개도 같은 방식. 빌드·설치·실행 없음"
+  },
+  "rea": {
+    "version": "6.8.0",
+    "runs": [
+      {
+        "command": "import-reference-source",
+        "target": "ref-jsmv",
+        "exit": 0,
+        "seconds": 1.5,
+        "result": "파일 16개, ES import 관계 27, 파싱 실패 0"
+      },
+      {
+        "command": "import-reference-source",
+        "target": "ref-jsmv-summary",
+        "exit": 0,
+        "seconds": 1.3,
+        "result": "4.5 KB 요약"
+      },
+      {
+        "command": "import-reference-source",
+        "target": "ref-gib",
+        "exit": 0,
+        "seconds": 1.4,
+        "result": "파일 43개, 관계 70, 파싱 실패 0"
+      },
+      {
+        "command": "analyze-javascript-application",
+        "target": "app-jsmv",
+        "exit": 0,
+        "seconds": 3.8,
+        "result": "파싱 실패 0, AST 4,543, 함수 94(이름 33), 리스너 7, modules 0. 결과 5.4 MB 는 SHA-256 만"
+      },
+      {
+        "command": "analyze-javascript-application",
+        "target": "app-gib",
+        "exit": 0,
+        "seconds": 5.6,
+        "result": "파싱 실패 0, AST 12,451, 함수 205(이름 136), modules 0. 결과 10.6 MB 는 SHA-256 만"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-jsmv-summary",
+        "exit": 0,
+        "seconds": 1.6,
+        "result": "11.5 KB"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-jsmv-modules",
+        "exit": 0,
+        "seconds": 1.7,
+        "result": "14.3 KB"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-jsmv-facts",
+        "exit": 0,
+        "seconds": 1.7,
+        "result": "60.0 KB"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-gib-summary",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "12.0 KB"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-gib-modules",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "24.8 KB"
+      },
+      {
+        "command": "inspect-analysis-view",
+        "target": "view-gib-facts",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "98.2 KB"
+      },
+      {
+        "command": "trace-application-feature",
+        "target": "feature-jsmv-roomutils",
+        "exit": 0,
+        "seconds": 1.6,
+        "result": "씨앗 7, 노드 55·간선 119"
+      },
+      {
+        "command": "trace-application-feature",
+        "target": "feature-jsmv-player",
+        "exit": 0,
+        "seconds": 1.7,
+        "result": "씨앗 3, 노드 55·간선 119 — 같은 그래프"
+      },
+      {
+        "command": "trace-application-feature",
+        "target": "feature-gib-gib",
+        "exit": 0,
+        "seconds": 2.2,
+        "result": "씨앗 3, 노드 261·간선 260"
+      },
+      {
+        "command": "trace-application-feature",
+        "target": "feature-gib-map",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "씨앗 3, 노드 261·간선 260 — 같은 그래프"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-exitzones-callers",
+        "exit": 0,
+        "seconds": 1.6,
+        "result": "씨앗 roomUtils.js:173 만, 호출자 0"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-camerazones-callers",
+        "exit": 0,
+        "seconds": 1.8,
+        "result": "씨앗 roomUtils.js:149 만"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-doublejump-callers",
+        "exit": 0,
+        "seconds": 1.8,
+        "result": "씨앗 player.js:162 만(실제 호출 enemyBoss.js 117행은 직접 확인)"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-colliders-callers",
+        "exit": 0,
+        "seconds": 1.8,
+        "result": "씨앗 roomUtils.js:11, unknown 22"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-doublejump-property",
+        "exit": 0,
+        "seconds": 1.8,
+        "result": "ambiguous, 노드 5"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-jsmv-bossdefeated-property",
+        "exit": 0,
+        "seconds": 1.7,
+        "result": "ambiguous, 노드 9·관계 4"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-gib-abilities-property",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "Gib.js:18 1곳"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-gib-jumps-property",
+        "exit": 0,
+        "seconds": 2.3,
+        "result": "ambiguous, Gib.js 42·87·196·198행"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-gib-tiles-property",
+        "exit": 0,
+        "seconds": 2.2,
+        "result": "Map.js:25 1곳"
+      },
+      {
+        "command": "trace-javascript-semantics",
+        "target": "sem-gib-drill-callers",
+        "exit": 0,
+        "seconds": 2.2,
+        "result": "ambiguous, 씨앗 8"
+      }
+    ]
+  },
+  "features": [
+    {
+      "name": "방 전환(이웃 방 불러오기·반대쪽 문에 세우기)",
+      "upstream_how": "jsmv: 출구 사각형 충돌 → 덮개 0.3초 → 다음 장면에 exitName 전달, 새 방은 그 이름의 시작 자리에 배치",
+      "evidence": "trace-summaries.json(semantics-jsmv-exitzones-callers: src/scenes/roomUtils.js 173행), app-analysis.summary.json(jsmv functions)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "몸 가운데가 방 밖으로 나가면 L/R/T/B, 위로 오르면 구멍 옆 바닥에 섬, 0.25초 어둡게"
+    },
+    {
+      "name": "능력 문 7종",
+      "upstream_how": "jsmv: 보스 처치로 isBossDefeated·isDoubleJumpUnlocked 를 켜고 장벽 끔. gib: 아이템이 abilities 깃발을 켜고 동작 코드가 깃발 확인",
+      "evidence": "trace-summaries.json(semantics-jsmv-bossdefeated-property, semantics-gib-abilities-property: src/Gib.js 18행)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "벽 타기 기둥, 이단 점프 높은 문, 금 간 바위벽(대시), 물굴(수영), 금 간 바닥(내려찍기), 얼음(불탄), 보스·열쇠 문"
+    },
+    {
+      "name": "타일 충돌·한쪽 발판",
+      "upstream_how": "jsmv: 정적 충돌체 + 점프 중 passthrough 해소 건너뛰기. gib: 주변 타일 한 칸씩 확인",
+      "evidence": "trace-summaries.json(semantics-jsmv-colliders-callers: roomUtils.js 11행), semantics-gib-tiles-property(Map.js 25행)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "축 분리, 발판은 위에서만, ↓+점프로 내려가기, 코요테·점프 기억"
+    },
+    {
+      "name": "카메라",
+      "upstream_how": "jsmv: 가로 추적·방 끝 고정, 세로는 카메라 구역에서 0.8초 이동",
+      "evidence": "trace-summaries.json(semantics-jsmv-camerazones-callers: roomUtils.js 149행)",
+      "status": "partial",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "방 한 칸 = 한 화면이라 고정 카메라와 흔들림만. 큰 방 따라가기는 보류"
+    },
+    {
+      "name": "이단 점프",
+      "upstream_how": "jsmv: 점프 횟수 1→2. gib: jumps 를 땅에서 0, 누를 때 +1",
+      "evidence": "semantics-jsmv-doublejump-property, semantics-gib-jumps-property(Gib.js 42·87·196·198행)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "땅·벽에 닿으면 다시 채움"
+    },
+    {
+      "name": "부수는 벽",
+      "upstream_how": "gib: 벽돌에 붙어 드릴 단추",
+      "evidence": "semantics-gib-drill-callers(Gib.js 109·133·161·167행)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "대시·내려찍기·불탄으로 각각 다른 칸"
+    },
+    {
+      "name": "보스 방 잠금·보상",
+      "upstream_how": "jsmv: 싸움 상태·장벽, 처치 후 보상·해제",
+      "evidence": "semantics-jsmv-bossdefeated-property(room1.js 82행)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "보스 6마리, 처치 시 능력·체력 조각·열쇠, 마지막은 엔딩"
+    },
+    {
+      "name": "저장 지점·숨은 강화",
+      "upstream_how": "jsmv: 체력 카트리지(최대치까지 회복), 저장 없음",
+      "evidence": "app-analysis.summary.json(jsmv functions: makeCartridge)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "별돌 7곳(localStorage), 체력 조각 13·탄 강화 9"
+    },
+    {
+      "name": "지도 화면",
+      "upstream_how": "두 대상 모두 없음",
+      "evidence": "app-analysis.summary.json(함수 목록에 지도 없음)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "다녀온 방·문 종류 색·별돌·보스·남은 물건·수집 %"
+    },
+    {
+      "name": "능력 잠금 그래프 자동 검사",
+      "upstream_how": "두 대상 모두 없음",
+      "evidence": "tests/reach.test.mjs, tools/solver.mjs",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "게임과 같은 물리로 동작 묶음을 흉내 냄: 방마다 잠금, 66방 전체 순서, 갇힘 없음"
+    },
+    {
+      "name": "키보드·터치·게임패드",
+      "upstream_how": "gib: 키보드·게임패드 입력 장치 묶음",
+      "evidence": "app-analysis.summary.json(gib functions: InputDevice·GamepadInput)",
+      "status": "implemented",
+      "commits": [
+        "d436f72"
+      ],
+      "note": "터치 단추 44px 이상, 손가락 미끄러짐 따라감"
+    }
+  ],
+  "limitations": [
+    "ES 모듈 사이 호출을 앱 분석에서 잇지 못함: import-reference-source 관계 27·70, analyze-javascript-application modules 0 — 호출자 추적은 씨앗만 돌려줌",
+    "kaboom 의 구성 요소 배열·onCollide 콜백 함수가 이름 없이 남아 jsmv 함수 94개 중 33개만 이름이 잡힘",
+    "속성 추적 대부분 ambiguous(객체 흐름 후보), 프레임마다 바뀌는 수치는 알려 주지 않음",
+    "지도 데이터(Tiled JSON·map.txt)는 받지 않아 방 배치 비교는 하지 않음 — 지도는 새로 설계",
+    "정적 분석이라 손맛은 볼 수 없음 — 물리 단위 시험과 도달 검사기로 확인"
+  ],
+  "doc": "docs/rea/javascript-metroidvania-analysis.md",
+  "evidence_dir": "docs/rea/evidence"
+}
