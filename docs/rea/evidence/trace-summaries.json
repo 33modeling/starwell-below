@@ -1,0 +1,452 @@
+{
+ "feature-gib-gib": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 3,
+   "traced_nodes": 261,
+   "traced_edges": 260,
+   "terminal_paths": 2,
+   "native_handoffs": 0,
+   "observed_facts": 201,
+   "inferred_facts": 356,
+   "unknown_facts": 0,
+   "unavailable_facts": 2
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 3
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-gib-map": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 3,
+   "traced_nodes": 261,
+   "traced_edges": 260,
+   "terminal_paths": 2,
+   "native_handoffs": 0,
+   "observed_facts": 201,
+   "inferred_facts": 356,
+   "unknown_facts": 0,
+   "unavailable_facts": 2
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 3
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-jsmv-player": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 3,
+   "traced_nodes": 55,
+   "traced_edges": 119,
+   "terminal_paths": 7,
+   "native_handoffs": 0,
+   "observed_facts": 76,
+   "inferred_facts": 112,
+   "unknown_facts": 0,
+   "unavailable_facts": 1
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 3
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "feature-jsmv-roomutils": {
+  "kind": "trace-application-feature",
+  "keys": [
+   "coverage",
+   "direction",
+   "evidence_links",
+   "graph",
+   "limitations",
+   "native_handoffs",
+   "paths",
+   "seed",
+   "seed_matches",
+   "source_evidence_id",
+   "source_graph_id",
+   "summary",
+   "trace_id"
+  ],
+  "summary": {
+   "matched_seeds": 7,
+   "traced_nodes": 55,
+   "traced_edges": 119,
+   "terminal_paths": 7,
+   "native_handoffs": 0,
+   "observed_facts": 76,
+   "inferred_facts": 112,
+   "unknown_facts": 0,
+   "unavailable_facts": 1
+  },
+  "coverage": {
+   "status": "partial",
+   "source_graph_status": "partial",
+   "total_seed_matches": 7
+  },
+  "limitations": [
+   "A trace reports graph relationships, not proof that code executed or that a feature is reachable in every state.",
+   "Native handoffs never open a binary or invoke a provider automatically; snapshot reuse remains provider/profile/target exact.",
+   "Static, native, passive-runtime, inferred, and unknown facts retain their original authority in the returned graph.",
+   "The source application graph is incomplete; unmatched seeds and frontiers remain unknown."
+  ]
+ },
+ "semantics-gib-abilities-property": {
+  "seed": {
+   "kind": "property",
+   "name": "abilities"
+  },
+  "direction": "forward-influence",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 1
+  },
+  "seed_locations": [
+   "src/Gib.js:18"
+  ],
+  "reached_locations": [
+   "src/Gib.js:18"
+  ],
+  "relations": {},
+  "unknowns": {
+   "object-flow/ambiguous-target": 1
+  }
+ },
+ "semantics-gib-drill-callers": {
+  "seed": {
+   "kind": "property",
+   "name": "drill"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 8,
+   "traversed_nodes": 16,
+   "traversed_relations": 8,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 12
+  },
+  "seed_locations": [
+   "src/Gib.js:109",
+   "src/Gib.js:133",
+   "src/Gib.js:161",
+   "src/Gib.js:167"
+  ],
+  "reached_locations": [
+   "src/Gib.js:107",
+   "src/Gib.js:109",
+   "src/Gib.js:110",
+   "src/Gib.js:131",
+   "src/Gib.js:133",
+   "src/Gib.js:134",
+   "src/Gib.js:159",
+   "src/Gib.js:161",
+   "src/Gib.js:162",
+   "src/Gib.js:165",
+   "src/Gib.js:167",
+   "src/Gib.js:168"
+  ],
+  "relations": {
+   "reads-property/candidate": 8
+  },
+  "unknowns": {
+   "object-flow/ambiguous-target": 12
+  }
+ },
+ "semantics-gib-jumps-property": {
+  "seed": {
+   "kind": "property",
+   "name": "jumps"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 5,
+   "traversed_nodes": 5,
+   "traversed_relations": 0,
+   "traversed_functions": 2,
+   "traversed_modules": 1,
+   "relevant_unknowns": 5
+  },
+  "seed_locations": [
+   "src/Gib.js:196",
+   "src/Gib.js:198",
+   "src/Gib.js:42",
+   "src/Gib.js:87"
+  ],
+  "reached_locations": [
+   "src/Gib.js:196",
+   "src/Gib.js:198",
+   "src/Gib.js:42",
+   "src/Gib.js:87"
+  ],
+  "relations": {},
+  "unknowns": {
+   "object-flow/ambiguous-target": 5
+  }
+ },
+ "semantics-gib-tiles-property": {
+  "seed": {
+   "kind": "property",
+   "name": "tiles"
+  },
+  "direction": "forward-influence",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 1
+  },
+  "seed_locations": [
+   "src/Map.js:25"
+  ],
+  "reached_locations": [
+   "src/Map.js:25"
+  ],
+  "relations": {},
+  "unknowns": {
+   "object-flow/ambiguous-target": 1
+  }
+ },
+ "semantics-jsmv-bossdefeated-property": {
+  "seed": {
+   "kind": "property",
+   "name": "isBossDefeated"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 5,
+   "traversed_nodes": 9,
+   "traversed_relations": 4,
+   "traversed_functions": 4,
+   "traversed_modules": 4,
+   "relevant_unknowns": 4
+  },
+  "seed_locations": [
+   "src/scenes/room1.js:82"
+  ],
+  "reached_locations": [
+   "src/entities/enemyBoss.js:115",
+   "src/scenes/room1.js:82",
+   "src/scenes/roomUtils.js:103",
+   "src/scenes/roomUtils.js:82"
+  ],
+  "relations": {
+   "reads-property/candidate": 3,
+   "aliases/resolved": 1
+  },
+  "unknowns": {
+   "object-flow/ambiguous-target": 4
+  }
+ },
+ "semantics-jsmv-camerazones-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "528710731413322920156ab0ad9379e2ebb3a7abc3fdb6652e5ea684cea0c572"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 6
+  },
+  "seed_locations": [
+   "src/scenes/roomUtils.js:149"
+  ],
+  "reached_locations": [
+   "src/scenes/roomUtils.js:149"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 6
+  }
+ },
+ "semantics-jsmv-colliders-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "708202fb8c6d7a1c443ef0a08c0cdc18d502c5974c2fe21cb4ab49cc94b2c080"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 22
+  },
+  "seed_locations": [
+   "src/scenes/roomUtils.js:11"
+  ],
+  "reached_locations": [
+   "src/scenes/roomUtils.js:11"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 22
+  }
+ },
+ "semantics-jsmv-doublejump-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "6eab8060de19b7ccfe63b5ae8904bb44fbf6d6a34da095845ba3ea1950650f0b"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 0
+  },
+  "seed_locations": [
+   "src/entities/player.js:162"
+  ],
+  "reached_locations": [
+   "src/entities/player.js:162"
+  ],
+  "relations": {},
+  "unknowns": {}
+ },
+ "semantics-jsmv-doublejump-property": {
+  "seed": {
+   "kind": "property",
+   "name": "isDoubleJumpUnlocked"
+  },
+  "direction": "forward-influence",
+  "status": "ambiguous",
+  "summary": {
+   "total_seed_matches": 3,
+   "traversed_nodes": 5,
+   "traversed_relations": 2,
+   "traversed_functions": 2,
+   "traversed_modules": 3,
+   "relevant_unknowns": 2
+  },
+  "seed_locations": [
+   "src/entities/player.js:12"
+  ],
+  "reached_locations": [
+   "src/entities/enemyBoss.js:116",
+   "src/entities/player.js:12"
+  ],
+  "relations": {
+   "aliases/resolved": 1,
+   "reads-property/candidate": 1
+  },
+  "unknowns": {
+   "object-flow/ambiguous-target": 2
+  }
+ },
+ "semantics-jsmv-exitzones-callers": {
+  "seed": {
+   "kind": "function",
+   "fingerprint_sha256": "d393ced183a1452b0ccdf9daa7c056888e3231512e746458120061a2f942f80f"
+  },
+  "direction": "callers",
+  "status": "found",
+  "summary": {
+   "total_seed_matches": 1,
+   "traversed_nodes": 1,
+   "traversed_relations": 0,
+   "traversed_functions": 1,
+   "traversed_modules": 1,
+   "relevant_unknowns": 7
+  },
+  "seed_locations": [
+   "src/scenes/roomUtils.js:173"
+  ],
+  "reached_locations": [
+   "src/scenes/roomUtils.js:173"
+  ],
+  "relations": {},
+  "unknowns": {
+   "call-flow/dynamic-call": 7
+  }
+ }
+}

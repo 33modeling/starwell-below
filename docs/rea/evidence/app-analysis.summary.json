@@ -1,0 +1,2318 @@
+{
+ "jsmv": {
+  "evidence_id": "ev_4c00d19e26ecf3580b891654cbd355c7f0de2a7035577e3050209c7e579d0ab0",
+  "statistics": {
+   "relevant_files": 14,
+   "nested_asar_containers": 0,
+   "text_bytes_read": 26776,
+   "invalid_utf8_files": 0,
+   "parsed_javascript_files": 13,
+   "skipped_javascript_files": 0,
+   "visited_ast_nodes": 4543,
+   "findings": 91,
+   "modules": 0,
+   "parse_failures": 0
+  },
+  "application_graph": {
+   "nodes": {
+    "javascript-asset": 13,
+    "javascript-module": 33,
+    "artifact": 2,
+    "endpoint": 6,
+    "unknown": 1
+   },
+   "edges": {
+    "static-import": 27,
+    "contains": 92
+   },
+   "limitations": [
+    "Caller-selected source analysis leaves 1 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+   ]
+  },
+  "semantic_graph": {
+   "nodes": {
+    "expression": 1930,
+    "property-slot": 271,
+    "call-site": 442,
+    "function": 94,
+    "binding": 105,
+    "parameter": 63,
+    "return-site": 36,
+    "task": 11,
+    "module": 13,
+    "literal": 5,
+    "event": 7,
+    "request": 2,
+    "listener": 7,
+    "boundary": 1
+   },
+   "relations": {
+    "aliases": 1042,
+    "reads": 569,
+    "reads-property": 431,
+    "captures": 210,
+    "defines": 198,
+    "writes-property": 8,
+    "argument-to-parameter": 1,
+    "awaits": 11,
+    "validates": 1,
+    "calls": 3,
+    "registers-listener": 7,
+    "returns-to-call": 2,
+    "constructs-request": 2,
+    "spreads": 1
+   },
+   "resolution": {
+    "resolved": 1154,
+    "candidate": 1332
+   },
+   "fingerprints": 94,
+   "unknowns": {
+    "object-flow/ambiguous-target": 612,
+    "call-flow/dynamic-call": 440,
+    "data-flow/unknown-value": 179,
+    "promise-ownership/ambiguous-target": 11,
+    "event/ambiguous-target": 7,
+    "object-flow/dynamic-property": 2,
+    "boundary/ambiguous-target": 1
+   }
+  },
+  "functions": {
+   "src/entities/player.js": [
+    {
+     "name": "makePlayer",
+     "line": 5
+    },
+    {
+     "name": "setPosition",
+     "line": 19
+    },
+    {
+     "name": "enablePassthrough",
+     "line": 23
+    },
+    {
+     "name": null,
+     "line": 24
+    },
+    {
+     "name": "setControls",
+     "line": 30
+    },
+    {
+     "name": null,
+     "line": 34
+    },
+    {
+     "name": null,
+     "line": 53
+    },
+    {
+     "name": null,
+     "line": 68
+    },
+    {
+     "name": null,
+     "line": 90
+    },
+    {
+     "name": "disableControls",
+     "line": 102
+    },
+    {
+     "name": "respawnIfOutOfBounds",
+     "line": 108
+    },
+    {
+     "name": null,
+     "line": 113
+    },
+    {
+     "name": "setEvents",
+     "line": 120
+    },
+    {
+     "name": null,
+     "line": 122
+    },
+    {
+     "name": null,
+     "line": 127
+    },
+    {
+     "name": null,
+     "line": 130
+    },
+    {
+     "name": null,
+     "line": 133
+    },
+    {
+     "name": null,
+     "line": 137
+    },
+    {
+     "name": null,
+     "line": 142
+    },
+    {
+     "name": null,
+     "line": 155
+    },
+    {
+     "name": "enableDoubleJump",
+     "line": 162
+    }
+   ],
+   "src/scenes/roomUtils.js": [
+    {
+     "name": "setBackgroundColor",
+     "line": 3
+    },
+    {
+     "name": "setMapColliders",
+     "line": 11
+    },
+    {
+     "name": "activate",
+     "line": 43
+    },
+    {
+     "name": null,
+     "line": 48
+    },
+    {
+     "name": null,
+     "line": 56
+    },
+    {
+     "name": "deactivate",
+     "line": 60
+    },
+    {
+     "name": null,
+     "line": 65
+    },
+    {
+     "name": null,
+     "line": 72
+    },
+    {
+     "name": null,
+     "line": 80
+    },
+    {
+     "name": null,
+     "line": 95
+    },
+    {
+     "name": null,
+     "line": 101
+    },
+    {
+     "name": "setCameraControls",
+     "line": 128
+    },
+    {
+     "name": null,
+     "line": 129
+    },
+    {
+     "name": "setCameraZones",
+     "line": 149
+    },
+    {
+     "name": null,
+     "line": 159
+    },
+    {
+     "name": null,
+     "line": 165
+    },
+    {
+     "name": "setExitZones",
+     "line": 173
+    },
+    {
+     "name": null,
+     "line": 185
+    },
+    {
+     "name": null,
+     "line": 196
+    }
+   ],
+   "src/entities/enemyBoss.js": [
+    {
+     "name": "makeBoss",
+     "line": 5
+    },
+    {
+     "name": "setBehavior",
+     "line": 26
+    },
+    {
+     "name": null,
+     "line": 29
+    },
+    {
+     "name": null,
+     "line": 35
+    },
+    {
+     "name": null,
+     "line": 37
+    },
+    {
+     "name": null,
+     "line": 49
+    },
+    {
+     "name": null,
+     "line": 53
+    },
+    {
+     "name": null,
+     "line": 61
+    },
+    {
+     "name": null,
+     "line": 67
+    },
+    {
+     "name": null,
+     "line": 73
+    },
+    {
+     "name": null,
+     "line": 78
+    },
+    {
+     "name": null,
+     "line": 82
+    },
+    {
+     "name": "setEvents",
+     "line": 86
+    },
+    {
+     "name": null,
+     "line": 89
+    },
+    {
+     "name": null,
+     "line": 94
+    },
+    {
+     "name": null,
+     "line": 109
+    },
+    {
+     "name": null,
+     "line": 125
+    },
+    {
+     "name": null,
+     "line": 128
+    }
+   ],
+   "src/main.js": [
+    {
+     "name": "main",
+     "line": 7
+    },
+    {
+     "name": null,
+     "line": 11
+    },
+    {
+     "name": null,
+     "line": 14
+    },
+    {
+     "name": null,
+     "line": 18
+    },
+    {
+     "name": null,
+     "line": 29
+    },
+    {
+     "name": null,
+     "line": 37
+    }
+   ],
+   "src/state/globalStateManager.js": [
+    {
+     "name": "initStateManager",
+     "line": 8
+    },
+    {
+     "name": "current",
+     "line": 18
+    },
+    {
+     "name": "set",
+     "line": 21
+    }
+   ],
+   "src/entities/enemyDrone.js": [
+    {
+     "name": "makeDrone",
+     "line": 1
+    },
+    {
+     "name": "setBehavior",
+     "line": 22
+    },
+    {
+     "name": null,
+     "line": 25
+    },
+    {
+     "name": null,
+     "line": 30
+    },
+    {
+     "name": null,
+     "line": 39
+    },
+    {
+     "name": null,
+     "line": 44
+    },
+    {
+     "name": null,
+     "line": 53
+    },
+    {
+     "name": null,
+     "line": 63
+    },
+    {
+     "name": "setEvents",
+     "line": 77
+    },
+    {
+     "name": null,
+     "line": 80
+    },
+    {
+     "name": null,
+     "line": 86
+    },
+    {
+     "name": null,
+     "line": 92
+    },
+    {
+     "name": null,
+     "line": 99
+    },
+    {
+     "name": null,
+     "line": 105
+    },
+    {
+     "name": null,
+     "line": 111
+    }
+   ],
+   "src/scenes/room2.js": [
+    {
+     "name": "room2",
+     "line": 12
+    }
+   ],
+   "src/entities/entitySharedLogic.js": [
+    {
+     "name": "makeBlink",
+     "line": 1
+    },
+    {
+     "name": null,
+     "line": 6
+    },
+    {
+     "name": null,
+     "line": 13
+    }
+   ],
+   "src/ui/notificationBox.js": [
+    {
+     "name": "makeNotificationBox",
+     "line": 1
+    },
+    {
+     "name": "close",
+     "line": 10
+    }
+   ],
+   "src/ui/healthBar.js": [
+    {
+     "name": "makeHealthBar",
+     "line": 4
+    },
+    {
+     "name": "setEvents",
+     "line": 16
+    },
+    {
+     "name": null,
+     "line": 17
+    }
+   ],
+   "src/scenes/room1.js": [
+    {
+     "name": "room1",
+     "line": 16
+    }
+   ],
+   "src/entities/healthCartridge.js": [
+    {
+     "name": "makeCartridge",
+     "line": 3
+    },
+    {
+     "name": null,
+     "line": 11
+    }
+   ]
+  },
+  "functions_named": 33,
+  "functions_total": 94,
+  "listeners": [
+   {
+    "module": "src/entities/player.js",
+    "line": 137,
+    "event": "heal",
+    "method": "on"
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "line": 105,
+    "event": "hurt",
+    "method": "on"
+   },
+   {
+    "module": "src/ui/healthBar.js",
+    "line": 17,
+    "event": "update",
+    "method": "on"
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "line": 92,
+    "event": "explode",
+    "method": "on"
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "line": 128,
+    "event": "hurt",
+    "method": "on"
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "line": 109,
+    "event": "explode",
+    "method": "on"
+   },
+   {
+    "module": "src/entities/player.js",
+    "line": 142,
+    "event": "hurt",
+    "method": "on"
+   }
+  ],
+  "timers": [],
+  "state_properties_top": [
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "x",
+    "slots": 8
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "width",
+    "slots": 6
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "add",
+    "slots": 5
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "height",
+    "slots": 5
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "y",
+    "slots": 4
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "setEvents",
+    "slots": 4
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "objects",
+    "slots": 4
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "objects",
+    "slots": 4
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "camPos",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "tween",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "vec2",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "area",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "rect",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "linear",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "pos",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "onCollide",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "color",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "Rect",
+    "slots": 3
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "playerInBossFight",
+    "slots": 3
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "pos",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "pos",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "x",
+    "slots": 2
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "name": "pos",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "fromHex",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "add",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "setEvents",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "pos",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "y",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "body",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "value",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "name",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "add",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "isBossDefeated",
+    "slots": 2
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "setBehavior",
+    "slots": 2
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "vec2",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "name": "hurt",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/healthBar.js",
+    "name": "fixed",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/notificationBox.js",
+    "name": "fromHex",
+    "slots": 1
+   },
+   {
+    "module": "src/state/globalStateManager.js",
+    "name": "playerInBossFight",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "name": "wait",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "setGravity",
+    "slots": 1
+   },
+   {
+    "module": "src/main.js",
+    "name": "scene",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "cancel",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "enableDoubleJump",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "y",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/notificationBox.js",
+    "name": "center",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "hurt",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/healthBar.js",
+    "name": "make",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/healthCartridge.js",
+    "name": "anchor",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "push",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "health",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "current",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "layers",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "use",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "onUpdate",
+    "slots": 1
+   },
+   {
+    "module": "src/state/globalStateManager.js",
+    "name": "playerHp",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "preventResolution",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "is",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "type",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/healthBar.js",
+    "name": "scale",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "name": "anchor",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "exitName",
+    "slots": 1
+   },
+   {
+    "module": "src/ui/healthBar.js",
+    "name": "sprite",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyDrone.js",
+    "name": "Rect",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "camPos",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "camScale",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "camScale",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "onKeyRelease",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/roomUtils.js",
+    "name": "fixed",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "setControls",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/healthCartridge.js",
+    "name": "sprite",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "body",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room2.js",
+    "name": "vec2",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "doubleJump",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "opacity",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/player.js",
+    "name": "destroy",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "health",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/enemyBoss.js",
+    "name": "current",
+    "slots": 1
+   },
+   {
+    "module": "src/entities/healthCartridge.js",
+    "name": "make",
+    "slots": 1
+   },
+   {
+    "module": "src/scenes/room1.js",
+    "name": "setPosition",
+    "slots": 1
+   }
+  ],
+  "require_like_edges": 0
+ },
+ "gib": {
+  "evidence_id": "ev_4db62e4bda782938a446a045f5fd99365719455860ffa745eb9315b69b94650b",
+  "statistics": {
+   "relevant_files": 41,
+   "nested_asar_containers": 0,
+   "text_bytes_read": 66450,
+   "invalid_utf8_files": 0,
+   "parsed_javascript_files": 39,
+   "skipped_javascript_files": 0,
+   "visited_ast_nodes": 12451,
+   "findings": 178,
+   "modules": 0,
+   "parse_failures": 0
+  },
+  "application_graph": {
+   "nodes": {
+    "javascript-module": 217,
+    "javascript-asset": 39,
+    "artifact": 3,
+    "unknown": 2
+   },
+   "edges": {
+    "contains": 190,
+    "static-import": 70
+   },
+   "limitations": [
+    "Caller-selected source analysis leaves 2 inventoried files outside analysis scope. Inventory identity covers the complete artifact; relationships through unselected sources remain unknown.",
+    "CommonJS and ESM binding relationships were recovered from inert syntax and resolved only within the inventoried artifact container.",
+    "Graph coverage is incomplete; unavailable facts remain explicit and must not be read as absence.",
+    "JavaScript and HTML were parsed as inert text; bundle bootstrap code was never executed.",
+    "Static imports, entrypoints, workers, endpoints, and storage relationships do not prove runtime execution.",
+    "Static paths and relationships may remain unresolved when expressions are dynamic or obfuscated.",
+    "Webpack/Rspack factories were recovered from AST literals; REA did not invoke push handlers or bundle bootstrap code."
+   ]
+  },
+  "semantic_graph": {
+   "nodes": {
+    "expression": 4347,
+    "parameter": 215,
+    "binding": 234,
+    "return-site": 58,
+    "property-slot": 150,
+    "function": 205,
+    "call-site": 539,
+    "module": 39,
+    "literal": 78
+   },
+   "relations": {
+    "defines": 1241,
+    "reads": 886,
+    "reads-property": 175,
+    "captures": 119,
+    "aliases": 911,
+    "writes": 83,
+    "writes-property": 36,
+    "returns-to-call": 6,
+    "calls": 1,
+    "argument-to-parameter": 2
+   },
+   "resolution": {
+    "resolved": 2323,
+    "candidate": 1137
+   },
+   "fingerprints": 167,
+   "unknowns": {
+    "object-flow/ambiguous-target": 1623,
+    "data-flow/unknown-value": 733,
+    "call-flow/dynamic-call": 539,
+    "object-flow/dynamic-property": 24
+   }
+  },
+  "functions": {
+   "src/InputDevice.js": [
+    {
+     "name": null,
+     "line": 1
+    },
+    {
+     "name": "constructor",
+     "line": 2
+    },
+    {
+     "name": "update",
+     "line": 14
+    },
+    {
+     "name": "pressed",
+     "line": 21
+    },
+    {
+     "name": "justPressed",
+     "line": 25
+    },
+    {
+     "name": "justReleased",
+     "line": 29
+    }
+   ],
+   "src/GamepadInput.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "process",
+     "line": 4
+    },
+    {
+     "name": null,
+     "line": 5
+    },
+    {
+     "name": null,
+     "line": 6
+    },
+    {
+     "name": null,
+     "line": 8
+    },
+    {
+     "name": null,
+     "line": 9
+    },
+    {
+     "name": null,
+     "line": 13
+    },
+    {
+     "name": null,
+     "line": 14
+    },
+    {
+     "name": null,
+     "line": 16
+    },
+    {
+     "name": null,
+     "line": 17
+    }
+   ],
+   "src/Victory.js": [
+    {
+     "name": null,
+     "line": 1
+    },
+    {
+     "name": "constructor",
+     "line": 2
+    },
+    {
+     "name": "update",
+     "line": 21
+    }
+   ],
+   "src/Gib.js": [
+    {
+     "name": null,
+     "line": 5
+    },
+    {
+     "name": "constructor",
+     "line": 6
+    },
+    {
+     "name": null,
+     "line": 36
+    },
+    {
+     "name": null,
+     "line": 44
+    },
+    {
+     "name": null,
+     "line": 48
+    },
+    {
+     "name": "init",
+     "line": 53
+    },
+    {
+     "name": "update",
+     "line": 62
+    },
+    {
+     "name": "updateLives",
+     "line": 223
+    },
+    {
+     "name": "damage",
+     "line": 233
+    },
+    {
+     "name": "drill",
+     "line": 271
+    },
+    {
+     "name": "kickUpDirt",
+     "line": 329
+    }
+   ],
+   "src/Timer.js": [
+    {
+     "name": null,
+     "line": 1
+    },
+    {
+     "name": "constructor",
+     "line": 2
+    },
+    {
+     "name": "update",
+     "line": 11
+    },
+    {
+     "name": "reset",
+     "line": 31
+    }
+   ],
+   "src/Renderer.js": [
+    {
+     "name": null,
+     "line": 13
+    },
+    {
+     "name": "constructor",
+     "line": 14
+    },
+    {
+     "name": null,
+     "line": 66
+    },
+    {
+     "name": "setUpTexture",
+     "line": 84
+    },
+    {
+     "name": "createVertexBuffer",
+     "line": 95
+    },
+    {
+     "name": "updateVertex",
+     "line": 103
+    },
+    {
+     "name": "clear",
+     "line": 109
+    },
+    {
+     "name": "shake",
+     "line": 113
+    },
+    {
+     "name": "update",
+     "line": 118
+    },
+    {
+     "name": "draw",
+     "line": 133
+    }
+   ],
+   "src/enemies/Boss.js": [
+    {
+     "name": null,
+     "line": 4
+    },
+    {
+     "name": "constructor",
+     "line": 5
+    },
+    {
+     "name": "damage",
+     "line": 21
+    },
+    {
+     "name": null,
+     "line": 22
+    }
+   ],
+   "src/enemies/Rock.js": [
+    {
+     "name": null,
+     "line": 4
+    },
+    {
+     "name": "constructor",
+     "line": 5
+    },
+    {
+     "name": null,
+     "line": 23
+    },
+    {
+     "name": "init",
+     "line": 37
+    },
+    {
+     "name": "update",
+     "line": 44
+    }
+   ],
+   "src/Input.js": [
+    {
+     "name": null,
+     "line": 4
+    },
+    {
+     "name": "constructor",
+     "line": 5
+    },
+    {
+     "name": "update",
+     "line": 12
+    },
+    {
+     "name": null,
+     "line": 19
+    },
+    {
+     "name": null,
+     "line": 33
+    },
+    {
+     "name": null,
+     "line": 36
+    },
+    {
+     "name": "pressed",
+     "line": 40
+    },
+    {
+     "name": null,
+     "line": 41
+    },
+    {
+     "name": "justPressed",
+     "line": 44
+    },
+    {
+     "name": null,
+     "line": 45
+    },
+    {
+     "name": "justReleased",
+     "line": 48
+    },
+    {
+     "name": null,
+     "line": 49
+    }
+   ],
+   "src/Laser.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 22
+    },
+    {
+     "name": "explode",
+     "line": 64
+    }
+   ],
+   "src/items/Flotation.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/Game.js": [
+    {
+     "name": null,
+     "line": 14
+    },
+    {
+     "name": "constructor",
+     "line": 15
+    },
+    {
+     "name": null,
+     "line": 33
+    },
+    {
+     "name": "load",
+     "line": 89
+    },
+    {
+     "name": "update",
+     "line": 96
+    },
+    {
+     "name": "render",
+     "line": 127
+    },
+    {
+     "name": "start",
+     "line": 135
+    },
+    {
+     "name": "over",
+     "line": 139
+    },
+    {
+     "name": "won",
+     "line": 144
+    }
+   ],
+   "src/SpriteController.js": [
+    {
+     "name": null,
+     "line": 1
+    },
+    {
+     "name": "constructor",
+     "line": 2
+    },
+    {
+     "name": "init",
+     "line": 21
+    },
+    {
+     "name": "x",
+     "line": 25
+    },
+    {
+     "name": "y",
+     "line": 29
+    },
+    {
+     "name": "x",
+     "line": 33
+    },
+    {
+     "name": "y",
+     "line": 37
+    },
+    {
+     "name": "left",
+     "line": 41
+    },
+    {
+     "name": "right",
+     "line": 45
+    },
+    {
+     "name": "top",
+     "line": 49
+    },
+    {
+     "name": "bottom",
+     "line": 53
+    },
+    {
+     "name": "update",
+     "line": 57
+    },
+    {
+     "name": "tileAt",
+     "line": 94
+    },
+    {
+     "name": "laserHit",
+     "line": 101
+    }
+   ],
+   "src/Sprite.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": null,
+     "line": 28
+    },
+    {
+     "name": "spawn",
+     "line": 40
+    },
+    {
+     "name": null,
+     "line": 74
+    },
+    {
+     "name": "update",
+     "line": 88
+    },
+    {
+     "name": "flash",
+     "line": 133
+    },
+    {
+     "name": "disable",
+     "line": 143
+    }
+   ],
+   "src/enemies/WormSegment.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 21
+    },
+    {
+     "name": "laserHit",
+     "line": 79
+    },
+    {
+     "name": "explode",
+     "line": 83
+    }
+   ],
+   "src/GameOver.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 25
+    }
+   ],
+   "src/Poison.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 24
+    },
+    {
+     "name": "explode",
+     "line": 60
+    }
+   ],
+   "src/enemies/WormHead.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "init",
+     "line": 13
+    },
+    {
+     "name": "laserHit",
+     "line": 31
+    }
+   ],
+   "src/SpriteSheet.js": [
+    {
+     "name": null,
+     "line": 6
+    },
+    {
+     "name": "constructor",
+     "line": 7
+    },
+    {
+     "name": "updateSprite",
+     "line": 21
+    },
+    {
+     "name": "spawnSprite",
+     "line": 33
+    },
+    {
+     "name": "update",
+     "line": 46
+    },
+    {
+     "name": "draw",
+     "line": 58
+    },
+    {
+     "name": "reset",
+     "line": 63
+    }
+   ],
+   "src/enemies/BossSegment.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "explode",
+     "line": 10
+    }
+   ],
+   "src/KeyboardInput.js": [
+    {
+     "name": null,
+     "line": 41
+    },
+    {
+     "name": "constructor",
+     "line": 42
+    },
+    {
+     "name": null,
+     "line": 45
+    },
+    {
+     "name": null,
+     "line": 76
+    },
+    {
+     "name": "update",
+     "line": 108
+    }
+   ],
+   "src/items/Heart.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/items/Teleportation.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "collected",
+     "line": 10
+    }
+   ],
+   "src/ParticleSystem.js": [
+    {
+     "name": null,
+     "line": 4
+    },
+    {
+     "name": "constructor",
+     "line": 5
+    },
+    {
+     "name": "emitParticle",
+     "line": 17
+    },
+    {
+     "name": "update",
+     "line": 34
+    },
+    {
+     "name": "draw",
+     "line": 38
+    }
+   ],
+   "src/enemies/BossEye.js": [
+    {
+     "name": null,
+     "line": 5
+    },
+    {
+     "name": "constructor",
+     "line": 6
+    },
+    {
+     "name": null,
+     "line": 25
+    },
+    {
+     "name": "init",
+     "line": 31
+    },
+    {
+     "name": "update",
+     "line": 38
+    },
+    {
+     "name": "shoot",
+     "line": 57
+    },
+    {
+     "name": "laserHit",
+     "line": 68
+    }
+   ],
+   "src/Audio.js": [
+    {
+     "name": null,
+     "line": 1
+    },
+    {
+     "name": "constructor",
+     "line": 2
+    },
+    {
+     "name": "speak",
+     "line": 6
+    },
+    {
+     "name": "play",
+     "line": 14
+    }
+   ],
+   "src/Title.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 24
+    }
+   ],
+   "src/items/Excavation.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/TextLayer.js": [
+    {
+     "name": null,
+     "line": 6
+    },
+    {
+     "name": "constructor",
+     "line": 7
+    },
+    {
+     "name": "titleText",
+     "line": 21
+    },
+    {
+     "name": "helpText",
+     "line": 29
+    },
+    {
+     "name": "livesText",
+     "line": 37
+    },
+    {
+     "name": "updateChar",
+     "line": 45
+    },
+    {
+     "name": "getUV",
+     "line": 56
+    },
+    {
+     "name": "createSegment",
+     "line": 81
+    },
+    {
+     "name": "createCenteredSegment",
+     "line": 107
+    },
+    {
+     "name": "update",
+     "line": 123
+    },
+    {
+     "name": "draw",
+     "line": 137
+    }
+   ],
+   "src/items/Propulsion.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/Brick.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "drill",
+     "line": 15
+    }
+   ],
+   "src/Map.js": [
+    {
+     "name": null,
+     "line": 16
+    },
+    {
+     "name": "constructor",
+     "line": 17
+    },
+    {
+     "name": "tileAt",
+     "line": 171
+    },
+    {
+     "name": "setTileAt",
+     "line": 181
+    },
+    {
+     "name": "prevTileOffset",
+     "line": 191
+    },
+    {
+     "name": "nextTileOffset",
+     "line": 195
+    }
+   ],
+   "src/items/Item.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 19
+    }
+   ],
+   "src/TextSegment.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": null,
+     "line": 19
+    },
+    {
+     "name": null,
+     "line": 37
+    },
+    {
+     "name": null,
+     "line": 45
+    },
+    {
+     "name": null,
+     "line": 59
+    },
+    {
+     "name": "update",
+     "line": 69
+    },
+    {
+     "name": "hide",
+     "line": 99
+    }
+   ],
+   "src/Start.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "constructor",
+     "line": 4
+    },
+    {
+     "name": "update",
+     "line": 24
+    }
+   ],
+   "src/items/Extermination.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/Shader.js": [
+    {
+     "name": "numComponents",
+     "line": 1
+    },
+    {
+     "name": null,
+     "line": 18
+    },
+    {
+     "name": "constructor",
+     "line": 19
+    },
+    {
+     "name": null,
+     "line": 69
+    },
+    {
+     "name": "use",
+     "line": 72
+    }
+   ],
+   "src/items/Elevation.js": [
+    {
+     "name": null,
+     "line": 3
+    },
+    {
+     "name": "collected",
+     "line": 4
+    }
+   ],
+   "src/index.js": [
+    {
+     "name": "updateGame",
+     "line": 5
+    }
+   ]
+  },
+  "functions_named": 136,
+  "functions_total": 205,
+  "listeners": [],
+  "timers": [],
+  "state_properties_top": [
+   {
+    "module": "src/TextSegment.js",
+    "name": "size",
+    "slots": 5
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "name",
+    "slots": 5
+   },
+   {
+    "module": "src/Gib.js",
+    "name": "drill",
+    "slots": 4
+   },
+   {
+    "module": "src/GamepadInput.js",
+    "name": "pressed",
+    "slots": 4
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "active",
+    "slots": 3
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "type",
+    "slots": 3
+   },
+   {
+    "module": "src/KeyboardInput.js",
+    "name": "keyCode",
+    "slots": 2
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "connect",
+    "slots": 2
+   },
+   {
+    "module": "src/Input.js",
+    "name": "x",
+    "slots": 2
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "location",
+    "slots": 2
+   },
+   {
+    "module": "src/KeyboardInput.js",
+    "name": "code",
+    "slots": 2
+   },
+   {
+    "module": "src/KeyboardInput.js",
+    "name": "preventDefault",
+    "slots": 2
+   },
+   {
+    "module": "src/Input.js",
+    "name": "y",
+    "slots": 2
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "setValueAtTime",
+    "slots": 2
+   },
+   {
+    "module": "src/Input.js",
+    "name": "index",
+    "slots": 2
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "exponentialRampToValueAtTime",
+    "slots": 2
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "update",
+    "slots": 2
+   },
+   {
+    "module": "src/Laser.js",
+    "name": "laserHit",
+    "slots": 1
+   },
+   {
+    "module": "src/Laser.js",
+    "name": "top",
+    "slots": 1
+   },
+   {
+    "module": "src/Map.js",
+    "name": "spawnSprite",
+    "slots": 1
+   },
+   {
+    "module": "src/Laser.js",
+    "name": "right",
+    "slots": 1
+   },
+   {
+    "module": "src/Victory.js",
+    "name": "createCenteredSegment",
+    "slots": 1
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "disable",
+    "slots": 1
+   },
+   {
+    "module": "src/Input.js",
+    "name": "process",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "getActiveAttrib",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "y",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "createProgram",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "getUniformLocation",
+    "slots": 1
+   },
+   {
+    "module": "src/Map.js",
+    "name": "length",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "use",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "shaderSource",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "index",
+    "slots": 1
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "rate",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "u",
+    "slots": 1
+   },
+   {
+    "module": "src/index.js",
+    "name": "render",
+    "slots": 1
+   },
+   {
+    "module": "src/Victory.js",
+    "name": "titleText",
+    "slots": 1
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "pitch",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "view",
+    "slots": 1
+   },
+   {
+    "module": "src/Input.js",
+    "name": "update",
+    "slots": 1
+   },
+   {
+    "module": "src/Start.js",
+    "name": "titleText",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "size",
+    "slots": 1
+   },
+   {
+    "module": "src/Victory.js",
+    "name": "helpText",
+    "slots": 1
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "createVertexBuffer",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "crossOrigin",
+    "slots": 1
+   },
+   {
+    "module": "src/Input.js",
+    "name": "justReleased",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "getActiveUniform",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "components",
+    "slots": 1
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "y",
+    "slots": 1
+   },
+   {
+    "module": "src/GamepadInput.js",
+    "name": "filter",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "FLOAT",
+    "slots": 1
+   },
+   {
+    "module": "src/Map.js",
+    "name": "split",
+    "slots": 1
+   },
+   {
+    "module": "src/Sprite.js",
+    "name": "init",
+    "slots": 1
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "z",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "ACTIVE_ATTRIBUTES",
+    "slots": 1
+   },
+   {
+    "module": "src/Title.js",
+    "name": "titleText",
+    "slots": 1
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "stop",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "attachShader",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "length",
+    "slots": 1
+   },
+   {
+    "module": "src/Audio.js",
+    "name": "start",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "createVertexBuffer",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "split",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "getProgramParameter",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "getContext",
+    "slots": 1
+   },
+   {
+    "module": "src/GameOver.js",
+    "name": "createCenteredSegment",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "compileShader",
+    "slots": 1
+   },
+   {
+    "module": "src/Title.js",
+    "name": "createCenteredSegment",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "charCodeAt",
+    "slots": 1
+   },
+   {
+    "module": "src/TextLayer.js",
+    "name": "v",
+    "slots": 1
+   },
+   {
+    "module": "src/Input.js",
+    "name": "justPressed",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "width",
+    "slots": 1
+   },
+   {
+    "module": "src/GameOver.js",
+    "name": "helpText",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "VERTEX_SHADER",
+    "slots": 1
+   },
+   {
+    "module": "src/SpriteSheet.js",
+    "name": "x",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "height",
+    "slots": 1
+   },
+   {
+    "module": "src/Start.js",
+    "name": "createCenteredSegment",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "getAttribLocation",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "FLOAT_VEC4",
+    "slots": 1
+   },
+   {
+    "module": "src/Renderer.js",
+    "name": "loaded",
+    "slots": 1
+   },
+   {
+    "module": "src/Shader.js",
+    "name": "FLOAT_MAT4",
+    "slots": 1
+   },
+   {
+    "module": "src/ParticleSystem.js",
+    "name": "createVertexBuffer",
+    "slots": 1
+   }
+  ],
+  "require_like_edges": 0
+ }
+}

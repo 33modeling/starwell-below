@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0b0a12">
+<title>별우물 아래</title>
+<meta name="description" content="흙인형 모아가 별우물 아래 지하 세계를 탐험하는 메트로배니아 웹 게임">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main id="app">
+  <div id="stage">
+    <canvas id="game" width="480" height="272" tabindex="0" aria-label="게임 화면"></canvas>
+    <div id="hud-buttons">
+      <button id="btn-map-touch" type="button" aria-label="지도">지도</button>
+      <button id="btn-pause-touch" type="button" aria-label="멈춤">멈춤</button>
+    </div>
+
+    <section id="title" class="panel">
+      <h1>별우물 아래</h1>
+      <p class="sub">떨어진 별 조각을 쫓아 우물 아래로 내려간 흙인형 <b>모아</b>의 여행</p>
+      <div class="menu">
+        <button id="btn-continue" type="button" hidden>이어하기</button>
+        <button id="btn-new" type="button">새로 시작</button>
+        <button type="button" data-help>조작법</button>
+      </div>
+      <p id="save-info" class="small"></p>
+    </section>
+
+    <section id="pause" class="panel" hidden>
+      <h2>멈춤</h2>
+      <div class="menu">
+        <button id="btn-resume" type="button">계속</button>
+        <button id="btn-map" type="button">지도 보기</button>
+        <button id="btn-warp" type="button">마지막 별돌로 돌아가기</button>
+        <button type="button" data-help>조작법</button>
+        <button id="btn-sound" type="button">소리: 켬</button>
+        <button id="btn-title" type="button">처음 화면으로</button>
+      </div>
+    </section>
+
+    <section id="help" class="panel" hidden>
+      <h2>조작법</h2>
+      <ul class="keys">
+        <li><b>이동</b> ← → (A D) · 벽에 붙어 ↑ 오르기</li>
+        <li><b>점프</b> Z · 스페이스 · K (공중에서 한 번 더 = 이단 점프)</li>
+        <li><b>쏘기</b> X · J (↑ 누르면 위로)</li>
+        <li><b>대시</b> C · L · Shift</li>
+        <li><b>내려찍기</b> 공중에서 ↓</li>
+        <li><b>발판 아래로</b> ↓ + 점프</li>
+        <li><b>지도</b> M · Tab &nbsp; <b>멈춤</b> Esc · P</li>
+        <li><b>게임패드</b> A 점프 · X 쏘기 · B/RB 대시 · Y 지도 · Start 멈춤</li>
+      </ul>
+      <p class="small">별돌(푸른 돌)에 닿으면 기록하고 체력이 찹니다. 능력을 얻으면 막혔던 길이 열립니다.</p>
+      <div class="menu"><button id="btn-help-close" type="button">닫기</button></div>
+    </section>
+
+    <section id="ending" class="panel" hidden>
+      <h2>별 심장이 다시 뛴다</h2>
+      <p>모아가 검은 별 그림자를 걷어 내자, 우물 바닥까지 별빛이 차올랐습니다.<br>
+      뿌리 마을터의 등잔이 하나둘 켜지고, 물길은 다시 노래하며 흐릅니다.<br>
+      흙인형 모아는 별 심장 곁에 작은 새싹 하나를 심고 위를 올려다봤습니다.</p>
+      <p id="ending-stats" class="small"></p>
+      <p class="small">끝 — 고마워요!</p>
+      <div class="menu"><button id="btn-end-title" type="button">처음 화면으로</button></div>
+    </section>
+  </div>
+
+  <div id="touch" aria-label="터치 단추">
+    <div class="pad">
+      <button type="button" data-key="up" aria-label="위">▲</button>
+      <button type="button" data-key="left" aria-label="왼쪽">◀</button>
+      <button type="button" data-key="right" aria-label="오른쪽">▶</button>
+      <button type="button" data-key="down" aria-label="아래">▼</button>
+    </div>
+    <div class="acts">
+      <button type="button" data-key="dash" aria-label="대시">대시</button>
+      <button type="button" data-key="shoot" aria-label="쏘기">쏘기</button>
+      <button type="button" data-key="jump" aria-label="점프">점프</button>
+    </div>
+  </div>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>

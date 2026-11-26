@@ -1,0 +1,562 @@
+{
+ "jsmv": {
+  "schema": "HistoricalSourceGraph",
+  "inventory_state": "partial",
+  "languages": [
+   "HTML",
+   "JavaScript",
+   "Markdown"
+  ],
+  "files": [
+   {
+    "path": "LICENSE",
+    "language": null,
+    "size": 1065,
+    "sha256": "de2620d914998bfde5e44fb943239ba47b18315d73d3ff08ad744afd2b95c85d",
+    "classifications": [
+     "documentation"
+    ]
+   },
+   {
+    "path": "README.MD",
+    "language": "Markdown",
+    "size": 286,
+    "sha256": "a206166b91f778949edb84796b72f029fadac5e670957fca0e658d649e8aed44",
+    "classifications": [
+     "documentation"
+    ]
+   },
+   {
+    "path": "index.html",
+    "language": "HTML",
+    "size": 163,
+    "sha256": "6b8c01b40b2b07e125359c06bc70b2a9e16974ceab8a0e17ebc11af06b023c63",
+    "classifications": [
+     "unknown"
+    ]
+   },
+   {
+    "path": "src/entities/enemyBoss.js",
+    "language": "JavaScript",
+    "size": 3826,
+    "sha256": "a37c0e98430573ec03bb5e30260f199b36a82e9ccbdf39506a47ef0a88475e98",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/entities/enemyDrone.js",
+    "language": "JavaScript",
+    "size": 3049,
+    "sha256": "860dbe593f67ae40f96a598715bc16a040939cc16200c6783d7d53b6cacb5a90",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/entities/entitySharedLogic.js",
+    "language": "JavaScript",
+    "size": 299,
+    "sha256": "cc2103c0a27d36701d391de79160ec49dc2bbfb3bd8bae73a84666db5a4c3541",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/entities/healthCartridge.js",
+    "language": "JavaScript",
+    "size": 456,
+    "sha256": "b13a0bec39f8010835bd12f32bbd0fc7d6ba9d6dcc40336980481527e0a2a139",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/entities/player.js",
+    "language": "JavaScript",
+    "size": 4504,
+    "sha256": "d68800669188ec18b5925a26b643c94985a085e2735ce72ebaaa4be5cf4f68cc",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/kaboomLoader.js",
+    "language": "JavaScript",
+    "size": 1989,
+    "sha256": "0b5a64578a0ad6345554c78a4020470d2f72c5068457f5067153dc5b88d681e7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/main.js",
+    "language": "JavaScript",
+    "size": 1251,
+    "sha256": "e1eea99fdc390e8d0d6badeae938a8d0ce4ef5f286e05a6b68ea9915cdd0638b",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/scenes/room1.js",
+    "language": "JavaScript",
+    "size": 2703,
+    "sha256": "6ca749d2ffcee347a953be8822f6cc3f78cebc18f76894adffd318aebd74bc4f",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/scenes/room2.js",
+    "language": "JavaScript",
+    "size": 1826,
+    "sha256": "9aefbecf8b84afb1d8e305c6add96f50e705fb64f1453d9316a8554ec0c2c8d7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/scenes/roomUtils.js",
+    "language": "JavaScript",
+    "size": 5204,
+    "sha256": "087cb272f68ee6b969e14972d3f8a7d8422f954ada604272ff986f35bd4cf036",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/state/globalStateManager.js",
+    "language": "JavaScript",
+    "size": 542,
+    "sha256": "28be35e8c5084e3b9d3fdbee64e7135f8d1cedd2283967d2baab5b245def2988",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/ui/healthBar.js",
+    "language": "JavaScript",
+    "size": 642,
+    "sha256": "186602ff245f97905e80c1c51ef376ac084906bd8a4b13894372cc5702a5dd7a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/ui/notificationBox.js",
+    "language": "JavaScript",
+    "size": 485,
+    "sha256": "355416d1a288226df64a0617527d56fa92bb2e93e6ef3466f0ed9a07d617a490",
+    "classifications": [
+     "source"
+    ]
+   }
+  ],
+  "relationships": 27,
+  "parse_failures": 0,
+  "vcs_head": "5a2ef84de0978e790b0edf035cf5a5a1901fa44c"
+ },
+ "gib": {
+  "schema": "HistoricalSourceGraph",
+  "inventory_state": "partial",
+  "languages": [
+   "HTML",
+   "JSON",
+   "JavaScript",
+   "Markdown"
+  ],
+  "files": [
+   {
+    "path": "LICENSE",
+    "language": null,
+    "size": 1072,
+    "sha256": "6e1597f1219942f13b6f40772ca092d1be985bf128314917344a720f6ca2f6c0",
+    "classifications": [
+     "documentation"
+    ]
+   },
+   {
+    "path": "README.md",
+    "language": "Markdown",
+    "size": 1300,
+    "sha256": "9d3813b05850120e20d911e038002468a035169f5a2e9953f33f123a4224c4aa",
+    "classifications": [
+     "documentation"
+    ]
+   },
+   {
+    "path": "index.html",
+    "language": "HTML",
+    "size": 351,
+    "sha256": "9d2377e741a77132eb9a08db4de5b3606b14ea7ed3e2c97672dc53df4347e878",
+    "classifications": [
+     "unknown"
+    ]
+   },
+   {
+    "path": "package.json",
+    "language": "JSON",
+    "size": 775,
+    "sha256": "870b84f228b5f9539c308f12a013ed5f70e5739e02138b0f1b6a056a020c2d79",
+    "classifications": [
+     "manifest"
+    ]
+   },
+   {
+    "path": "src/Audio.js",
+    "language": "JavaScript",
+    "size": 982,
+    "sha256": "b72f8d538d22d8471c8fcb8de44e50e8f7b3db0b5d1d4aa39d3c3854ef4bba3a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Brick.js",
+    "language": "JavaScript",
+    "size": 967,
+    "sha256": "39a9b08b49bff79e69aacaf1164fc1ef5f9d3d4fa4b1218f1e121dc31169f0e4",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Game.js",
+    "language": "JavaScript",
+    "size": 3502,
+    "sha256": "5a57108804193b5db864a0da2c778f857d9702e4c01215821448d0002332f5ff",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/GameOver.js",
+    "language": "JavaScript",
+    "size": 822,
+    "sha256": "e7d78174916077cb674088aa2cf802193690d8fba5d781f791a96b71d27acd92",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/GamepadInput.js",
+    "language": "JavaScript",
+    "size": 1050,
+    "sha256": "6d35d749118aa52a9b648f758328574b9467a3e9fe6552d5591a1aee673cb1dc",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Gib.js",
+    "language": "JavaScript",
+    "size": 8516,
+    "sha256": "a82378390394c1d35f99077e20787925b08925e143e56500e52b0648fa21db24",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Input.js",
+    "language": "JavaScript",
+    "size": 1166,
+    "sha256": "87b30a5a9876146e83c81a80d277fa4b013ac6b82af1ac31fa4585e378e593d8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/InputDevice.js",
+    "language": "JavaScript",
+    "size": 669,
+    "sha256": "f1b22cf0bd8735779eaecf6e1243bb35a6840f98874a483779914309a8d908ce",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/KeyboardInput.js",
+    "language": "JavaScript",
+    "size": 2648,
+    "sha256": "312812abb55e71aaa1a741dfc64ee34194510d12d1efc0763cfc9f8bb3fe99e7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Laser.js",
+    "language": "JavaScript",
+    "size": 1933,
+    "sha256": "f286fef764a4cb9e5cb8c20546bbccc064171490017beacadbbc5b015a223ef8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Map.js",
+    "language": "JavaScript",
+    "size": 5916,
+    "sha256": "d1fd56cbc2377fb63ecac098cea9789b3df2fa54da0d8510ce444596173e8c62",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/ParticleSystem.js",
+    "language": "JavaScript",
+    "size": 1167,
+    "sha256": "2240168ab9bdc3d4739248205e3d0c14e619a55355bfd260d489a6d032f0ed9c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Poison.js",
+    "language": "JavaScript",
+    "size": 1761,
+    "sha256": "8fe25247471f5d61a6f36b8088e2575fd6b09b19534c9f2151dd24cea6a7871e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Renderer.js",
+    "language": "JavaScript",
+    "size": 4186,
+    "sha256": "4ffee07804b3036eba72e98669f15114ddedbc9f10875a6301f10dbf22b5cb50",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Shader.js",
+    "language": "JavaScript",
+    "size": 2951,
+    "sha256": "81e36bc90d2fac8747b044f6e05566b9e89a61f5dd346b1804eb7248df0e4967",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Sprite.js",
+    "language": "JavaScript",
+    "size": 2608,
+    "sha256": "7d05784b567723c628e58d127e6d9d9858a2a4f74bc449177d11173f101b5034",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/SpriteController.js",
+    "language": "JavaScript",
+    "size": 2006,
+    "sha256": "a510855ab20f5737d0e831023a679aecc67f6f31ed6f0f2f7e10ff61dc376b8c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/SpriteSheet.js",
+    "language": "JavaScript",
+    "size": 1753,
+    "sha256": "8a92a73d975acd362311078df09a0e4765a9b18d5fe3a62f046700a4a74fa025",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Start.js",
+    "language": "JavaScript",
+    "size": 851,
+    "sha256": "30b6908c96d9ec12d55f4964f9acc9d9a3ccbc6a6f3bd265bef2b94c3f18d8a3",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/TextLayer.js",
+    "language": "JavaScript",
+    "size": 3244,
+    "sha256": "c832ac53908801f9893fe36fce29fca6a27a080796f0d7aa58c6715656d3147a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/TextSegment.js",
+    "language": "JavaScript",
+    "size": 2413,
+    "sha256": "540b1efa16f241461d728cf8d881ccadcba750f010650751af04202ae1e0ccad",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Timer.js",
+    "language": "JavaScript",
+    "size": 619,
+    "sha256": "57a4cdfc74820abfa70c85ec2c83808bcc1235c73d23cbdcfdd409c05b733f92",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Title.js",
+    "language": "JavaScript",
+    "size": 798,
+    "sha256": "ff6f7ff746ce3497c258450f74e62f84bb5673525c1af0cbb1a159fac4b8cf12",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/Victory.js",
+    "language": "JavaScript",
+    "size": 522,
+    "sha256": "acf2bcb121648b9ad35c6b1e1e2f6c3209d30481dcbe849067719b96b59697b6",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/Boss.js",
+    "language": "JavaScript",
+    "size": 1327,
+    "sha256": "45fd2a0c0af995836b9b0b59beeb69ba915ad868ba146f628865bdca51fcbd1c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/BossEye.js",
+    "language": "JavaScript",
+    "size": 1876,
+    "sha256": "f1276fc0d5ac326ae1fc78df5af574d6dba61f8ade5c571dc63b267d9abd5e8a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/BossSegment.js",
+    "language": "JavaScript",
+    "size": 546,
+    "sha256": "87c035021aa535051ce3b8369e8616c9ae512240a76400e43c0981c8d24295d8",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/Rock.js",
+    "language": "JavaScript",
+    "size": 2216,
+    "sha256": "7b5306bc95d13c826cd81daf532202b1c656f931cb4c0c99f6849cd0b491adf9",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/WormHead.js",
+    "language": "JavaScript",
+    "size": 1128,
+    "sha256": "33824236ffbe02c260444c94304df245774b3f91e478a30b9bd1165d33997f6a",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/enemies/WormSegment.js",
+    "language": "JavaScript",
+    "size": 2199,
+    "sha256": "5003351fafde252d32ad5e8c6242b9d5f692459765da8e9e362866d72b96a7e7",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/index.js",
+    "language": "JavaScript",
+    "size": 208,
+    "sha256": "6e9d172f8879309e63b24e9019a322e81d041d06b33ef9d54819092b8ae0c241",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Elevation.js",
+    "language": "JavaScript",
+    "size": 455,
+    "sha256": "4dfbc68d4de85b40b33a732dd45f83a8cd0e1723559463b4cc9f55dcc778fdb2",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Excavation.js",
+    "language": "JavaScript",
+    "size": 465,
+    "sha256": "578a4001d9fe91720794590f5915be40bee7d06160d205bffc4af9b8490acf7e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Extermination.js",
+    "language": "JavaScript",
+    "size": 467,
+    "sha256": "4d33e83d540b6cf62444520230e96b64ef4badaa917d814624c105e487f0a83d",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Flotation.js",
+    "language": "JavaScript",
+    "size": 468,
+    "sha256": "f88e21893e0d07acbaa511062f87a7646d43013d216dc0d72031a2e9963d58fb",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Heart.js",
+    "language": "JavaScript",
+    "size": 179,
+    "sha256": "09c7a7d87b2f20fefbaaf5e34ef8ad52b5d82c959f759a463be460156141a78c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Item.js",
+    "language": "JavaScript",
+    "size": 1104,
+    "sha256": "b185a6e2b69f55d63f2722a0ed9bd474e3730bb9b335732db4a3d25d2db95b4c",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Propulsion.js",
+    "language": "JavaScript",
+    "size": 486,
+    "sha256": "c168d7df221348a802a7a5f45fc573584efdb5afa249d70ac020fed0994e3c5e",
+    "classifications": [
+     "source"
+    ]
+   },
+   {
+    "path": "src/items/Teleportation.js",
+    "language": "JavaScript",
+    "size": 276,
+    "sha256": "aaf79fe88005798812242f4cb66aaa51b00ef8249981ede8268675104be6b69f",
+    "classifications": [
+     "source"
+    ]
+   }
+  ],
+  "relationships": 70,
+  "parse_failures": 0,
+  "vcs_head": "2ecea116da3e1ae0a2aafe774b63e06ea197f4c7"
+ }
+}

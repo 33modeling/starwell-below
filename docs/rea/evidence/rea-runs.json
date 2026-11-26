@@ -1,0 +1,318 @@
+{
+ "tool": "rea-agents 6.8.0 (npx, 전역 설치·MCP 설정·setup 없음)",
+ "node": "v22.23.4",
+ "targets": {
+  "jsmv": {
+   "repo": "https://github.com/JSLegendDev/JavaScript-Metroidvania",
+   "commit": "5a2ef84de0978e790b0edf035cf5a5a1901fa44c",
+   "license": "MIT (Copyright (c) 2024 JSLegend)",
+   "sparse_paths": [
+    "/src/",
+    "/index.html",
+    "/README.MD",
+    "/LICENSE"
+   ],
+   "excluded": [
+    "assets/(그림·글꼴·소리)",
+    "maps/(Tiled 방 지도 JSON)",
+    "lib/(kaboom.js 라이브러리)"
+   ]
+  },
+  "gib": {
+   "repo": "https://github.com/attilahorvath/gib",
+   "commit": "2ecea116da3e1ae0a2aafe774b63e06ea197f4c7",
+   "license": "MIT (Copyright (c) 2018 Attila Horváth)",
+   "sparse_paths": [
+    "/src/",
+    "/index.html",
+    "/README.md",
+    "/LICENSE",
+    "/package.json"
+   ],
+   "excluded": [
+    "assets/(그림·map.txt 지도)",
+    "shaders/",
+    "build/(번들)",
+    "package-lock.json"
+   ]
+  }
+ },
+ "note": "큰 결과와 대상 코드 조각이 든 결과는 저장소에 넣지 않았다(bytes·sha256 만). 같은 명령(scripts/run-rea.sh)으로 다시 만들어 SHA-256 으로 대조한다. trace-*-input.json 은 app-*.json 을 그대로 감싼 입력이라 따로 적지 않았다.",
+ "runs": [
+  {
+   "label": "ref-jsmv",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/jsmv --format json",
+   "exit": 0,
+   "seconds": 1.5,
+   "output": {
+    "file": "ref-source-jsmv.json",
+    "bytes": 8575,
+    "sha256": "c6578eaa8ae5c4d1f3c5ed24d957419cd1c3a97804e634fd2b3f6b142cca7146"
+   }
+  },
+  {
+   "label": "ref-jsmv-summary",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/jsmv --detail summary --outline-depth 3 --format json",
+   "exit": 0,
+   "seconds": 1.3,
+   "output": {
+    "file": "ref-source-jsmv.summary.json",
+    "bytes": 4471,
+    "sha256": "598013cfcc609b542040ba549b8bfe164deecfc9a93d30b577707db1f28ca4fb"
+   }
+  },
+  {
+   "label": "ref-gib",
+   "command": "npx -y rea-agents@6.8.0 import-reference-source <target>/gib --format json",
+   "exit": 0,
+   "seconds": 1.4,
+   "output": {
+    "file": "ref-source-gib.json",
+    "bytes": 19293,
+    "sha256": "e6ca516db359bfece2a617e49f4f088d6767e63f373e66898453cca0edbb3c3d"
+   }
+  },
+  {
+   "label": "app-jsmv",
+   "command": "npx -y rea-agents@6.8.0 analyze-javascript-application <target>/jsmv --source-paths-json <work>/selection-jsmv.json --max-semantic-nodes 300000 --max-semantic-unknowns 300000 --format json",
+   "exit": 0,
+   "seconds": 3.8,
+   "output": {
+    "file": "app-jsmv.json",
+    "bytes": 5447015,
+    "sha256": "8066b5e4b82a066afebc71296171f9ff468bf2f156b494702e7832f196e592dc"
+   }
+  },
+  {
+   "label": "app-gib",
+   "command": "npx -y rea-agents@6.8.0 analyze-javascript-application <target>/gib --source-paths-json <work>/selection-gib.json --max-semantic-nodes 300000 --max-semantic-unknowns 300000 --format json",
+   "exit": 0,
+   "seconds": 5.6,
+   "output": {
+    "file": "app-gib.json",
+    "bytes": 10556376,
+    "sha256": "999dbdd64d3d28a064dfc61050f397e56717efca555137424456ad7ade162e2a"
+   }
+  },
+  {
+   "label": "view-jsmv-summary",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-jsmv-summary.json --format json",
+   "exit": 0,
+   "seconds": 1.6,
+   "output": {
+    "file": "app-jsmv-summary-view.json",
+    "bytes": 11824,
+    "sha256": "99e4d1322e1b5afe5c81c44b64685eeb5e1171ff508cdefed19b11e18bac5a3a"
+   }
+  },
+  {
+   "label": "view-jsmv-modules",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-jsmv-modules.json --format json",
+   "exit": 0,
+   "seconds": 1.7,
+   "output": {
+    "file": "app-jsmv-modules-view.json",
+    "bytes": 14681,
+    "sha256": "49fcdf01f51eb89303516635e1194eba665d070f66711d997609989e1d995fe1"
+   }
+  },
+  {
+   "label": "view-jsmv-facts",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-jsmv-facts.json --format json",
+   "exit": 0,
+   "seconds": 1.7,
+   "output": {
+    "file": "app-jsmv-facts-view.json",
+    "bytes": 61414,
+    "sha256": "98a9891222057fa4ec5f42c2958c9cc8d3faa0bfa4f6bfaae83808b79de0f589"
+   }
+  },
+  {
+   "label": "view-gib-summary",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-gib-summary.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "app-gib-summary-view.json",
+    "bytes": 12272,
+    "sha256": "9761be4c88d5cb1a21231b72fc4e595d943ea97a926a330da0d6befdbbb58a81"
+   }
+  },
+  {
+   "label": "view-gib-modules",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-gib-modules.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "app-gib-modules-view.json",
+    "bytes": 25405,
+    "sha256": "701c5233fab0619433c1c2d1b8e96257bb13578e74191f539264d4212588bb31"
+   }
+  },
+  {
+   "label": "view-gib-facts",
+   "command": "npx -y rea-agents@6.8.0 inspect-analysis-view view-gib-facts.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "app-gib-facts-view.json",
+    "bytes": 100556,
+    "sha256": "61a7389eb3a925d48822bb0b2a5f9208d339f2cbf0f7c7c7020af5411c1df671"
+   }
+  },
+  {
+   "label": "feature-jsmv-roomutils",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-jsmv-roomutils-input.json --format json",
+   "exit": 0,
+   "seconds": 1.6,
+   "output": {
+    "file": "trace-feature-jsmv-roomutils.json",
+    "bytes": 350547,
+    "sha256": "7ff6e5d518d68627294aa81028a10154b854d91bf5402bd50b58cd653005ed0c"
+   }
+  },
+  {
+   "label": "feature-jsmv-player",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-jsmv-player-input.json --format json",
+   "exit": 0,
+   "seconds": 1.7,
+   "output": {
+    "file": "trace-feature-jsmv-player.json",
+    "bytes": 349473,
+    "sha256": "88088d2b392a757248ee61abb7b2d33ffb318a6d33ecb5d944f134e402f504e6"
+   }
+  },
+  {
+   "label": "feature-gib-gib",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-gib-gib-input.json --format json",
+   "exit": 0,
+   "seconds": 2.2,
+   "output": {
+    "file": "trace-feature-gib-gib.json",
+    "bytes": 1019260,
+    "sha256": "b87d09df7a9fb280f558521cdba6e37cb41b5d6d3fb61f9b14fffd2d4dcff472"
+   }
+  },
+  {
+   "label": "feature-gib-map",
+   "command": "npx -y rea-agents@6.8.0 trace-application-feature trace-feature-gib-map-input.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "trace-feature-gib-map.json",
+    "bytes": 1019260,
+    "sha256": "36448ad53e831fcd090d547ac2de57efc48b05d320ffd490032e646cfbed7626"
+   }
+  },
+  {
+   "label": "sem-jsmv-exitzones-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-exitzones-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 1.6,
+   "output": {
+    "file": "trace-semantics-jsmv-exitzones-callers.json",
+    "bytes": 11194,
+    "sha256": "73a2eff198327e1ff4faad981f86af97f9bf9d35eb0d7b2909f70e600734c5c0"
+   }
+  },
+  {
+   "label": "sem-jsmv-camerazones-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-camerazones-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 1.8,
+   "output": {
+    "file": "trace-semantics-jsmv-camerazones-callers.json",
+    "bytes": 10600,
+    "sha256": "b8ce76b271b576050fd2742418ff08055d38f70044681e971fdb75a673910d51"
+   }
+  },
+  {
+   "label": "sem-jsmv-doublejump-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-doublejump-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 1.8,
+   "output": {
+    "file": "trace-semantics-jsmv-doublejump-callers.json",
+    "bytes": 6106,
+    "sha256": "52b0bd88a9351aa42e464c43cd726653023ad894ebd144dacae3ffe3b92f9ea1"
+   }
+  },
+  {
+   "label": "sem-jsmv-colliders-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-colliders-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 1.8,
+   "output": {
+    "file": "trace-semantics-jsmv-colliders-callers.json",
+    "bytes": 20141,
+    "sha256": "ab01c747b8abc77adf6e82ec957dbc1cfc36deb7e9c2cf28941f3f3a84db4156"
+   }
+  },
+  {
+   "label": "sem-jsmv-doublejump-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-doublejump-property-input.json --format json",
+   "exit": 0,
+   "seconds": 1.8,
+   "output": {
+    "file": "trace-semantics-jsmv-doublejump-property.json",
+    "bytes": 16302,
+    "sha256": "01015c0d4f730032a4e3df0a59d6d30ccf4f6bcd57477bdcbd20b5051b157a00"
+   }
+  },
+  {
+   "label": "sem-jsmv-bossdefeated-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-jsmv-bossdefeated-property-input.json --format json",
+   "exit": 0,
+   "seconds": 1.7,
+   "output": {
+    "file": "trace-semantics-jsmv-bossdefeated-property.json",
+    "bytes": 24794,
+    "sha256": "51998822f85a19ba461f5111b7d543642f0dc0f94399c71d0f09da81b73c2606"
+   }
+  },
+  {
+   "label": "sem-gib-abilities-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-gib-abilities-property-input.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "trace-semantics-gib-abilities-property.json",
+    "bytes": 7624,
+    "sha256": "63f1be7d05db5d19618270c1996c4902ffba35996546c6b89944b37354d491bb"
+   }
+  },
+  {
+   "label": "sem-gib-jumps-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-gib-jumps-property-input.json --format json",
+   "exit": 0,
+   "seconds": 2.3,
+   "output": {
+    "file": "trace-semantics-gib-jumps-property.json",
+    "bytes": 14135,
+    "sha256": "bad4dd6fec83c971d482231efbbbdcc433aa8ff6c53568c9c31516bc823ba845"
+   }
+  },
+  {
+   "label": "sem-gib-tiles-property",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-gib-tiles-property-input.json --format json",
+   "exit": 0,
+   "seconds": 2.2,
+   "output": {
+    "file": "trace-semantics-gib-tiles-property.json",
+    "bytes": 7604,
+    "sha256": "a1221cddd8fc94163d3412acf0662e33659d1b0272f1a23c7ea63f0cf4fd96bf"
+   }
+  },
+  {
+   "label": "sem-gib-drill-callers",
+   "command": "npx -y rea-agents@6.8.0 trace-javascript-semantics trace-semantics-gib-drill-callers-input.json --format json",
+   "exit": 0,
+   "seconds": 2.2,
+   "output": {
+    "file": "trace-semantics-gib-drill-callers.json",
+    "bytes": 34381,
+    "sha256": "93e5ff0f45493f2e03a43955947f2f6d41d0f38b4b58af99c3982c023fbfb327"
+   }
+  }
+ ]
+}

@@ -1,0 +1,15 @@
+{
+  "name": "starwell-below",
+  "version": "1.0.0",
+  "private": true,
+  "description": "별우물 아래 — 흙인형 모아의 메트로배니아(웹, Canvas 2D, 빌드 도구 없음)",
+  "type": "module",
+  "scripts": {
+    "world": "node tools/build-world.mjs",
+    "test": "node --test --test-concurrency=2 tests/*.test.mjs",
+    "test:e2e": "node --test --test-concurrency=1 tests/e2e/*.e2e.mjs",
+    "build": "node tools/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "license": "MIT"
+}
